@@ -1,0 +1,172 @@
+header {
+  height: 63px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.45vw;
+  padding-bottom: 1.5vw; 
+  
+}
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.65vw;
+
+}
+header img {
+  height: 4vw;
+  width: 4vw;;
+  margin-top: 0.8vw;
+  margin-left: 1vw;
+  cursor: pointer;
+
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0vw 2vw;
+}
+.button {
+  background: none;
+  font-size: 2.3vw;
+  margin-top: 1vw;
+  border: none;
+  font-weight: 600;
+  font-family:'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+button {
+  -webkit-tap-highlight-color: transparent; 
+  outline: none;
+} 
+
+button:focus, button:active {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25); 
+  border-radius: 5px;
+} 
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.button:hover {
+  color: #ffd700;
+}
+
+.button:hover::after {
+  width: 100%;
+}
+
+@media  (max-width : 1200px) { 
+
+  header {
+    padding: 1vw;
+    height: 83px;
+    font-size: 2vw;
+    gap: 1rem;
+  }
+  .nav {
+    gap: 4vw;
+    padding: 1vw;
+    padding-right: 3vw;
+  }
+  .button {
+  font-size: 3vw;
+  }
+  header img {
+    height: 6vw;
+    width: 6vw;
+
+  }  
+}
+@media  (max-width : 992px) { 
+  header {
+    padding: 1vw;
+    height: 65px;
+    font-size: 2.5vw;
+    gap: 1rem;
+  }
+  header img {
+    margin-top: -1vw;
+  }
+  .nav {
+    gap: 1vw;
+    padding: 2vw;
+ }
+  .button {
+    font-size: 4vw;
+    margin-top: 0vw;
+  }
+}
+
+
+
+@media  (max-width : 768px) { 
+
+  header {
+    padding: 2vw;
+    height: 56px;
+    gap: 2rem;
+  }
+  .button {
+  gap: 5vw;
+  padding-right: 3vw;
+  font-size: 4vw;
+  margin-top: 1vw;
+    }
+  
+  header img {
+    height: 6.5vw;
+    width: 6.5vw;
+    padding: 0vh;
+
+  }
+}
+
+@media  (max-width : 600px) { 
+  header {
+    height: 47px;
+  }
+  header img {
+    height: 8vw;
+    width: 8vw;
+    padding: 0vh;
+    }
+  .button {
+      gap: 5vw;
+  padding-right: 3vw;
+  font-size: 4.5vw;
+  margin-top: 1vw;
+    }
+  }
+
+   @media  (max-width : 480px) {
+      header {
+    height: 63px;
+    }
+    .button {
+      font-size: 5.5vw;
+    }
+    header img {
+    height: 11vw;
+    width: 11vw;
+    padding: 0vh;
+    }
+    .nav {
+      gap: 0px;
+    }
+}
+   

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+    <a href="#logo" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+  </div>
+
+    <nav class="logo" id="logo"> <h1>
+    <span class="first">Sa</span><span class="second">bit</span>
+  </h1></nav>
+    <nav id="navigation">
+      <a href="#navigation">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="herosection">
+      <div class="herosection-content">
+        <h2>Hello! <br> This is Md <span>Sabit</span></h2>
+        <p>I'am a <span>web developer</span> with a passion for creating <span>impactful</span> projects.</p>
+        <a href="#projects">View my work</a>
+        <div class="logos">
+          <div class="logopng"><img src="images/facebook.png" alt="Facebook Logo"></div>
+          <div class="logopng"><img src="images/linkedin.png" alt="LinkedIn Logo"></div>
+          <div class="logopng"><img src="images/instagram.png" alt="Instagram Logo"></div>
+          <div class="logopng"><img src="images/whatsapp.png" alt="WhatsApp Logo"></div>
+        </div>
+      </div>
+      <div class="herosectionimg">    
+          <img src="images/WhatsApp Image 2025-08-31 at 21.29.18_8b1a14d9.jpg" alt="Hero Image">
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skillimgbox">
+        <div class="skill1 skill1p">
+          <img src="images/files.png" alt="">
+          <p>I create clean and semantic HTML structures that form the backbone of every website I build</p>
+          <a href="https://www.w3schools.com/html/">learn more</a>
+        </div>
+        <div class="skill2 skill2p">
+          <img src="images/files (1).png" alt="">
+          <p>I design responsive and visually appealing websites with modern CSS techniques</p>
+          <a href="https://www.w3schools.com/css/">learn more</a>
+        </div>
+        <div class="skill3 skill3p">
+          <img src="images/js.png" alt="">
+          <p>I write dynamic and interactive scripts that bring websites to life and enhance user experience</p>
+          <a href="https://www.w3schools.com/js/">learn more</a>
+        </div>
+        <div class="skill4 skill4p">
+          <img src="images/paper.png" alt="">
+          <p>I design clean and modern UI/UX layouts, turning ideas into interactive prototypes</p>
+          <a href="https://help.figma.com/hc/en-us/categories/360002051613-Get-started">learn more</a>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projectimgbox">
+        <div class="project1">
+          <img src="images/piano.png" alt="">
+          <p>A simple yet interactive piano built using HTML, CSS, and JavaScript. It allows users to play different notes directly from their browser with smooth sound effects and a clean UI. This project helped me practice event handling and DOM manipulation.</p>
+          <a href="https://mdsabit05.github.io/Piano-melody/">View project</a>
+        </div>
+        <div class="project2">
+          <img src="images/[CITYPNG.COM]Brown Coffee Cup Logo Design HD PNG - 4000x4000.png" alt="">
+          <p>A modern café website designed to showcase menu items, reservations, and customer experience. Built with responsive layouts and styled elegantly using CSS, it highlights my ability to create visually appealing and user-friendly web pages.</p>
+          <a href="https://mdsabit05.github.io/Brew-Bite-cafe/">View project</a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="about">
+        <div class="aboutimg">
+          <img src="images/aboutimg.jpg" alt="">
+        </div>
+        <div class="abouttext">
+          <h2>About <span>me</span></h2>
+          <p>Hi! I’m a <span>passionate</span>  web developer and tech enthusiast who loves building creative projects and learning new <span>skills</span> every day. I enjoy turning ideas into <span>interactive</span> websites while exploring the latest in tech. <br>Always <span>curious</span>, Always <span>coding!</span></p>
+        </div>
+    </section>
+    <section id="contact">
+     <h2>Get in <span>touch</span></h2>
+     <div class="contactbox">
+      <div class="mail">Email : mdsabitrazabarkati@gmail.com</div>
+      <div class="phonenum">Phone : +91 7978152181</div>
+     </div>
+    </section>
+  </main>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

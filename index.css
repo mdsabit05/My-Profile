@@ -1,0 +1,977 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  background-color: rgb(208, 205, 202);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+}
+
+/* ...sidebar... */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #bfbbb5;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+  padding-top: 60px;
+  transition: all 0.4s ease-in-out;
+  z-index: 999;
+  opacity: 0.9;
+}
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 25px;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: #060606;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+
+.sidebar a:hover {
+  background: rgb(232, 134, 7);
+  color: #ffffff;
+  padding-left: 35px;
+}
+
+.toggle-btn {
+  position: fixed;
+  left: 1.5vw;
+  top: 1vw;
+  font-size: 2.5vw;
+  cursor: pointer;
+  z-index: 1000;
+  color: #000000;
+  transition: transform 0.3s ease;
+}
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #000000;
+  transition: transform 0.3s ease;
+}
+.sidebar a {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.sidebar.active a {
+  animation: slideIn 0.5s forwards;
+}
+.sidebar.active a:nth-child(1) { animation-delay: 0.1s; }
+.sidebar.active a:nth-child(2) { animation-delay: 0.2s; }
+.sidebar.active a:nth-child(3) { animation-delay: 0.3s; }
+.sidebar.active a:nth-child(4) { animation-delay: 0.4s; }
+.sidebar.active a:nth-child(5) { animation-delay: 0.5s; }
+.sidebar.active a:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+.logo {
+   padding-right: 41vw;
+   margin-right: 6vw;
+}
+#navigation {
+  display: flex;
+  gap: 2rem;
+  padding-top: 0.5vw;
+  font-family: 'Poppins', sans-serif;
+  padding-right: 2vw;
+}
+
+/*...page 1...*/
+
+#herosection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10vw;
+  padding-left: 8vw;
+  padding-top: 7vw;
+  padding-bottom: 5vw;
+  gap: 5vw;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-top: 0.2vw;
+  padding-left: 7.2vw;
+}
+.first {
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.second {
+  color: rgb(232, 134, 7);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.herosection-content h2 {
+  font-size: 4.4vw;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+.herosection-content span {
+   color:  rgb(235, 137, 8);
+   font-weight: bold;
+   
+} 
+.herosection-content p {
+  font-size: 1.5vw;
+  margin-bottom: 1.5vw;
+  font-family: 'Poppins', sans-serif;
+}
+.herosection-content a {
+  display: inline-block;
+  font-size: 1.2vw;
+  background-color: rgb(26, 25, 25);
+  padding: 0.7vw;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  transition: all 0.5s ease;
+}
+.herosection-content a:hover {
+  background-color:rgb(235, 137, 8);
+  color: black;
+  transform: scale(1.05);
+}
+
+.herosectionimg img {
+  height: 21vw;
+  width: 22vw;
+  object-fit: cover;
+  border-radius: 50%;
+   border: 2px solid rgb(0, 0, 0);
+}
+.logos {
+  display: flex;
+  gap: 1.5vw;
+  margin-top: 3vw;
+}
+.logopng img {
+  height: 2vw;
+  width: 2vw;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.logopng img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+/* ...about section... */
+
+#about{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  margin-top: 15vw;
+  margin-bottom: 15vw;
+}
+.aboutimg img {
+  height: 17vw;
+  width: 10vw;
+  object-fit: cover;
+  margin-left: 8vw;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+.aboutimg img:hover {
+  transform: scale(1.05);
+  border: 2px solid rgb(235, 137, 8);
+}
+.abouttext {
+  font-size: 2vw;
+  font-family: 'Poppins', sans-serif;
+  padding-right: 4vw;
+}
+.abouttext span {
+  color: rgb(232, 134, 7);
+  font-weight: bold;
+}
+
+/* ...skills section... */
+
+#skills {
+  margin-top: 13vw;
+  height: 50vh;
+  padding-top: 5vw;
+}
+#skills h2 {
+  padding-left: 8vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+.skillimgbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8vw;
+  gap: 2vw;
+  flex-wrap: wrap;
+  
+}
+
+.skillimgbox a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+
+}
+.skillimgbox a:hover {
+  background-color: rgb(253, 155, 26);
+  color: rgb(0, 0, 0);
+}
+.skillimgbox p  {
+  padding: 1vw;
+  padding-top: 0px;
+  margin-bottom: 0vw;
+    font-family: 'Poppins', sans-serif;
+}
+.skill1 , .skill2 , .skill3 , .skill4 {
+  height: 16vw;
+  width: 19vw;
+  background-color: rgb(240, 243, 245);
+  background-image: url(image);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.skill1:hover , .skill2:hover , .skill3:hover , .skill4:hover {
+   transform: scale(1.05);
+   background-color:rgb(247, 178, 87);
+}
+.skill1 img , .skill2 img , .skill3 img , .skill4 img {
+  height: 6vw;
+  width: 6vw;
+  object-fit: cover;
+  padding: 1vw;
+}
+.skill2 p {
+ margin-bottom: 1.5vw;
+}
+.skill3 p {
+ margin-bottom: 1.5vw;
+}
+.skill4 p {
+ margin-bottom: 1.6vw;
+}
+
+/* ...project section... */
+ 
+#projects {
+  margin-top: 15vw;
+  height: 50vh;
+  margin-bottom: 25vw;
+  padding-top: 5vw;
+}
+#projects h2 {
+  padding-left: 8vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+.projectimgbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8vw;
+  gap: 1.5vw;
+  
+}
+.project1 , .project2{
+  height: 21vw;
+  width: 30vw;
+  background-color: rgb(240, 243, 245);
+  background-image: url(image);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+ .project2:hover{
+  transform: scale(1.05);
+  background-color: rgba(244, 190, 89, 0.988);
+}
+.project1:hover{
+  transform: scale(1.05);
+  background-color: lightblue;
+}
+.project1 img , .project2 img {
+  height: 8vw;
+  width: 18.5vw;
+  object-fit: cover;
+  padding: 1vw;
+  padding-left: 11.5vw;
+  margin-top: 1vw;
+}
+
+.projectimgbox p  {
+  padding: 1vw;
+  padding-top: 0px;
+  margin-bottom: 0vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project1 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+
+}
+.project1 a:hover {
+  background-color: rgba(88, 206, 246, 0.988);
+  color: rgb(0, 0, 0);
+}
+.project2 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+
+}
+.project2 a:hover {
+  background-color: rgba(254, 171, 19, 0.988);
+  color: rgb(0, 0, 0);
+}
+
+/* ...contact section... */
+
+#contact {
+  margin-top: 13vw;
+  height: 20vh;
+}
+#contact h2 {
+  padding-left: 8vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3vw;
+}
+#contact .contactbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8vw;
+  gap: 2vw;
+}
+.mail,
+.phonenum {
+  background-color: rgb(240, 243, 245);
+  border-radius: 10px;
+  padding: 1vw;
+  transition: all 0.5s ease;
+}
+.mail:hover,
+.phonenum:hover {
+  transform: scale(1.05);
+  background-color: rgb(247, 178, 87);
+}
+.contact span {
+  color: rgb(232, 134, 7);
+  font-weight: bold;
+}
+
+
+
+@media (max-width: 1200px) {
+.toggle-btn {
+  left: 2vw;
+  top: 2vw;
+  font-size: 3.2vw;
+}
+#navigation {
+  gap: 1.5rem;
+  font-size: 1.5vw;
+
+}
+.sidebar a {
+    display: block;
+    padding: 26px 31px;
+    font-size: 2.5vw;
+}
+.close-btn {
+      font-size: 4rem;
+}
+.logo {
+  padding-right: 32vw;
+  margin-right: 3vw;
+}
+.herosection-content h2 {
+  font-size: 5vw;
+}
+.herosection-content p {
+  font-size: 1.4vw;
+}
+.herosectionimg img {
+  height: 24vw;
+  width: 24vw;
+}
+.herosection-content a {
+  font-size: 1.6vw;
+}
+.herosection-content a:hover {
+  background-color:rgb(235, 137, 8);
+  color: black;
+  transform: scale(1.05);
+}
+.logopng img {
+  height: 2.5vw;
+  width: 2.5vw;
+}
+#skills h2 {
+  font-size: 5vw;
+}
+.skill1, .skill2, .skill3, .skill4 {
+  height: 23vw;
+  width: 21.2vw;
+}
+.skill1 img, .skill2 img, .skill3 img, .skill4 img {
+  height: 7vw;
+  width: 7vw;
+}
+.skillimgbox p {
+  font-size: 1.5vw;
+}
+.skillimgbox {
+  margin-left: 6vw;
+}
+.skill1:hover , .skill2:hover , .skill3:hover , .skill4:hover {
+   transform: scale(1.05);
+   background-color:rgb(247, 178, 87);
+}
+#projects {
+  margin-top: 30vw;
+}
+#projects h2 {
+  font-size: 5vw;
+}
+.project1, .project2 {
+  height: 28vw;
+  width: 36vw;
+}
+.projectimgbox {
+  gap: 2vw;
+}
+.projectimgbox p {
+  font-size: 1.5vw;
+  margin-bottom: 1vw  ;
+}
+.project1 a {
+  margin-top: 1vw;
+}
+#about {
+  margin-top: 34vw;
+}
+.aboutimg img {
+  height: 23vw;
+  width: 13vw;
+  object-fit: cover;
+  margin-left: 7vw;
+}
+.aboutimg img:hover {
+  transform: scale(1.05);
+  border: 2px solid rgb(235, 137, 8);
+}
+.abouttext h2 {
+  font-size: 4vw;
+}
+.abouttext p {
+  font-size: 2.3vw;
+}
+#contact h2 {
+  font-size: 4vw;
+  margin-bottom: 2vw;
+}
+#contact {
+  margin-bottom: 5vw;
+}
+.contactbox {
+  font-size: 2vw;
+}
+}
+
+
+@media (max-width: 980px) {
+  .toggle-btn {
+  left: 2vw;
+  top: 2.8vw;
+  }
+  #navigation {
+  font-size: 2.8vw;
+  padding-top: 1vw;
+
+}
+.logo {
+  padding-right: 14vw;
+}
+.sidebar a {
+    display: block;
+    padding: 23px 31px;
+    font-size: 3vw;
+}
+#herosection {
+  padding-top: 10vw;
+  padding-left: 7vw;
+  padding-right: 0vw;
+}
+.herosection-content h2{
+  font-size: 6vw;
+  }
+.herosectionimg img {
+  height: 27vw;
+  width: 27vw;
+}
+.herosection-content p {
+  font-size: 1.6vw;
+}
+.herosection-content a {
+  font-size: 1.8vw;
+}
+.herosection-content a:hover {
+  background-color:rgb(235, 137, 8);
+  color: black;
+  transform: scale(1.05);
+}
+.logopng img {
+    height: 3vw;
+    width: 3vw;
+}
+    #skills h2 {
+    font-size: 6vw;
+}
+    .skill1, .skill2, .skill3, .skill4 {
+    height: 22vw;
+    width: 42.2vw;
+}
+.skillimgbox p {
+margin-bottom: 1vw;
+}
+.skill2p p , .skill4p p {
+  margin-bottom: 3.6vw;
+}
+        .skillimgbox p {
+        font-size: 1.8vw;
+    }
+        #projects h2 {
+        font-size: 6vw;
+    }
+        .project1, .project2 {
+        height: 40vw;
+        width: 43vw;
+    }
+        .projectimgbox p {
+        font-size: 2vw;
+        margin-bottom: 1vw;
+    }
+    .project1 img, .project2 img {
+    height: 10vw;
+    width: 23.5vw;
+    object-fit: cover;
+    padding: 1vw;
+    padding-left: 14.5vw;
+    margin-top: 1vw;
+}
+.projectimgbox {
+  margin-left: 6vw;
+}
+.project1 a , .project2 a {
+  font-size: 2vw;
+  padding: 1vw 1.5vw;
+  border-radius: 37px;
+}
+    #about {
+        margin-top: 49vw;
+    }
+    #projects {
+        margin-top: 46vw;
+    }
+    .aboutimg img {
+        height: 28vw;
+        width: 16vw;
+        object-fit: cover;
+        margin-left: 5vw;
+    }
+    .abouttext h2 {
+        font-size: 5.4vw;
+    }
+    .mail, .phonenum {
+    padding: 2vw
+    }
+
+}
+
+
+@media (max-width: 768px) {
+ .toggle-btn {
+  font-size: 5.5vw;
+  left: 5vw;
+}
+.logo h1 {
+  padding-left: 10.2vw;
+}
+header {
+  align-items: self-start;
+}
+#navigation {
+  display: none;
+}
+.logo {
+    padding-right: 2vw;
+}
+  .herosectionimg img {
+    display: none;
+    }
+        .herosection-content h2 {
+        font-size: 10vw;
+    }
+    #herosection {
+      padding-left: 10vw;
+    }
+    .herosection-content p {
+        font-size: 2.3vw;
+    }
+        .herosection-content a {
+        font-size: 2.5vw;
+        padding: 1.5vw;
+        border-radius: 12px;
+    }
+    .herosection-content a:hover {
+  background-color:rgb(235, 137, 8);
+  color: black;
+  transform: scale(1.05);
+}
+        .logopng img {
+        height: 4vw;
+        width: 4vw;
+    }
+    
+    .logos {
+          gap: 3.5vw;
+    }
+    .sidebar a {
+        display: block;
+        padding: 23px 31px;
+        font-size: 4vw;
+    }
+        #skills h2 {
+        font-size: 7.5vw;
+    }
+        .skill1 img, .skill2 img, .skill3 img, .skill4 img {
+        height: 9vw;
+        width: 9vw;
+    }
+    .skillimgbox p {
+        font-size: 2.5vw;
+    }
+        .skill1, .skill2, .skill3, .skill4 {
+        height: 31vw;
+        width: 43.2vw;
+    }
+    .skillimgbox a {
+      font-size: 2.5vw;
+          padding: 0.8vw 1.5vw;
+    }
+    .skill3p p{
+      margin-bottom: 3vw;
+    }
+        #projects h2 {
+        font-size: 7vw;
+    }
+        #projects {
+        margin-top: 57vw;
+    }
+        .projectimgbox {
+          flex-wrap: wrap;
+          padding-left: 5vw;
+        }
+      .project1, .project2 {
+        height: 45vw;
+        width: 79vw;
+    }
+        .project1 img, .project2 img {
+          margin-left: 19vw;
+          height: 13vw;
+          width: 26.5vw;
+        }
+        .projectimgbox p {
+        font-size: 2.4vw;
+        padding: 3vw;
+        
+        }
+        .project1 a, .project2 a {
+        font-size: 2.5vw;
+        margin-left: 3vw;
+        }
+        #about {
+        margin-top: 90vw;
+        }
+            .aboutimg img {
+        height: 36vw;
+        width: 21vw;
+        object-fit: cover;
+        margin-left: 4vw;
+    }
+        .abouttext h2 {
+        font-size: 7.4vw;
+    }
+        .abouttext p {
+        font-size: 2.6vw;
+    }
+        #contact h2 {
+        font-size: 6vw;
+        }
+            .contactbox {
+        font-size: 2.6vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .herosection-content h2 {
+      margin-top: 6vw;
+    }
+        .herosection-content p {
+        font-size: 3.3vw;
+    }
+        .herosection-content a {
+        font-size: 3vw;
+    }
+    .herosection-content a:hover {
+  background-color:rgb(235, 137, 8);
+  color: black;
+  transform: scale(1.05);
+}
+        .logopng img {
+        height: 5vw;
+        width: 5vw;
+    }
+    .logo h1 {
+  padding-left: 11.2vw;
+  padding-top: 0vw;
+}
+    .toggle-btn {
+        font-size: 6.5vw;
+        left: 5vw;
+    }
+    #skills {
+    margin-top: 13vw;
+    height: 50vh;
+    padding-top: 12vw;
+}
+    #skills h2 {
+        font-size: 8.5vw;
+        padding-left: 12vw;
+    }
+         .skill1, .skill2, .skill3, .skill4 {
+        height: 31vw;
+        width: 85.2vw;
+    }
+    .skill1 img, .skill2 img, .skill3 img, .skill4 img {
+        height: 11vw;
+        width: 11vw;
+    }
+        .skillimgbox p {
+        font-size: 3vw;
+    }
+    .skill1p p {
+      margin-bottom: 3vw;
+    }
+        .skillimgbox a {
+        font-size: 3vw;
+        padding: 0.8vw 1.5vw;
+    }
+        #projects {
+        margin-top: 115vw;
+    }
+        .project1 img, .project2 img {
+        margin-left: 16.5vw;
+        height: 16vw;
+        width: 29.5vw;
+    }
+        .projectimgbox p {
+        font-size: 3vw;
+        padding: 3vw;
+    }
+    .project1, .project2 {
+        height: 59vw;
+        width: 80vw;
+    }
+        .project1 a, .project2 a {
+        font-size: 3.5vw;
+        margin-left: 3vw;
+    }
+        #about {
+        margin-top: 110vw;
+    }
+        .aboutimg img {
+        height: 42vw;
+        width: 25vw;
+        object-fit: cover;
+        margin-left: 3vw;
+    }
+        .abouttext h2 {
+        font-size: 8.4vw;
+    }
+    .abouttext p {
+        font-size: 3vw;
+    }
+    #contact {
+    margin-top: 20vw;
+    height: 20vh;
+}
+.contactbox {
+        font-size: 3vw;
+    }
+
+
+}
+
+
+
+@media (max-width: 480px) {
+      .toggle-btn {
+        font-size: 8vw;
+        left: 5vw;
+        top: 4.2vw
+    }
+        #herosection {
+        padding-left: 7vw;
+    }
+        .herosection-content h2 {
+        font-size: 11vw;
+    }
+        .herosection-content p {
+        font-size: 3.7vw;
+    }
+        .herosection-content a {
+        font-size: 4vw;
+                padding: 2.5vw;
+    }
+        .logopng img {
+        height: 6vw;
+        width: 6vw;
+    }
+        .logos {
+        gap: 4vw;
+        margin-top: 5vw;
+    }
+        #skills h2 {
+        font-size: 11vw;
+        padding-left: 30vw;
+    }
+        .skill1 img, .skill2 img, .skill3 img, .skill4 img {
+        height: 13vw;
+        width: 13vw;
+    }
+        .skillimgbox p {
+        font-size: 4vw;
+    }
+    .skill1, .skill2, .skill3, .skill4 {
+        height: 44vw;
+        width: 86.2vw;
+    }
+    .skillimgbox a {
+        font-size: 3.5vw;
+        padding: 1.8vw 2.5vw;
+    }
+    .skill4p p {
+      margin-bottom: 6vw;
+    }
+       .skill4p img {
+        height: 15vw;
+        width: 15vw;
+       }
+           #projects {
+        margin-top: 130vw;
+    }
+        #projects h2 {
+        font-size: 9vw;
+            padding-left: 28vw;
+    }
+        .project1 img, .project2 img {
+        margin-left: 14.5vw;
+        height: 20vw;
+        width: 33.5vw;
+    }
+        .projectimgbox p {
+        font-size: 4vw;
+        padding: 3vw;
+    }
+        .project1, .project2 {
+        height: 85vw;
+        width: 80vw;
+    }
+        .project1 a, .project2 a {
+        font-size: 4vw;
+                padding: 2vw 2.5vw;
+        margin-left: 3vw;
+    }
+    .project2 p {
+      margin-bottom: 6vw;
+    }
+        .projectimgbox {
+        gap: 4vw;
+    }
+        #about {
+        margin-top: 140vw;
+    }
+        .aboutimg img {
+        height: 59vw;
+        width: 34vw;
+        }
+            .abouttext h2 {
+        font-size: 9.4vw;
+    }
+    .abouttext p {
+        font-size: 3.6vw;
+    }
+        #contact h2 {
+        font-size: 9vw;
+    }
+    #contact .contactbox {
+      flex-wrap: wrap;    
+    }
+        .contactbox {
+        font-size: 4vw;
+    }
+
+
+}
