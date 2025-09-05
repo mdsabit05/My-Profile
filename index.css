@@ -316,25 +316,24 @@ h1 {
   margin-top: 15vw;
   height: 50vh;
   margin-bottom: 25vw;
-  padding-top: 5vw;
+  padding: 5vw;
 }
 #projects h2 {
-  padding-left: 8vw;
   font-family: "Poppins", sans-serif;
-  font-size: 3vw;
-  margin-bottom: 2vw;
+  font-size: 3.5vw;
+  padding-left: 4vw;
+  /* margin-bottom: 2vw; */
 }
 .projectimgbox {
   display: flex;
   flex-direction: row;
-  margin-left: 8vw;
   gap: 1.5vw;
+  padding: 4vw;
 }
 .project1,
 .project2 {
-  /* height: 21vw; */
   padding-bottom: 2vw;
-  width: 30vw;
+  width: 40%;
   background-color: rgb(240, 243, 245);
   background-image: url(image);
   border-radius: 10px;
@@ -348,14 +347,22 @@ h1 {
   transform: scale(1.05);
   background-color: lightblue;
 }
-.project1 img,
-.project2 img {
+
+
+.project1, .project2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  text-align: center;    /* centers text under logo */
+  padding: 2vw;
+}
+
+.project1 img, .project2 img {
   height: 8vw;
-  width: 18.5vw;
   object-fit: cover;
-  padding: 1vw;
-  padding-left: 11.5vw;
-  margin-top: 1vw;
+  margin-bottom: 1.5vw; /* spacing below logo */
+  padding: 0;           /* remove extra padding */
 }
 
 .projectimgbox p {
@@ -499,19 +506,16 @@ h1 {
   }
   #projects {
     margin-top: 30vw;
+    padding: 6vw;
   }
   #projects h2 {
     font-size: 5vw;
+    margin-bottom: 3vw;
   }
-  .project1,
-  .project2 {
-    height: auto;
-    width: 36vw;
-    padding: 1vw;
-    padding-bottom: 2vw;
-  }
+  
   .projectimgbox {
     gap: 2vw;
+    padding: 0vw;
   }
   .projectimgbox p {
     font-size: 1.5vw;
@@ -520,6 +524,14 @@ h1 {
   .project1 a {
     margin-top: 1vw;
   }
+  .project1 a , .project2 a {
+    background-color: rgb(26, 25, 25);
+    padding: 0.8vw 1.2vw;
+    border-radius: 29px;
+    margin-left: 1vw;
+    color: white;
+    font-size: 2vw;
+}
   #about {
     margin-top: 34vw;
   }
@@ -619,26 +631,17 @@ h1 {
   #projects h2 {
     font-size: 6vw;
   }
-  .project1,
-  .project2 {
-    /* height: 40vw; */
-    width: 43vw;
-  }
+  
   .projectimgbox p {
     font-size: 2vw;
     margin-bottom: 1vw;
   }
-  .project1 img,
-  .project2 img {
+  .project1 img, .project2 img {
     height: 10vw;
-    width: 23.5vw;
-    object-fit: cover;
-    padding: 1vw;
-    padding-left: 14.5vw;
-    margin-top: 1vw;
   }
-  .projectimgbox {
-    margin-left: 6vw;
+  .project1, .project2 {
+    padding-bottom: 2vw;
+    width: 50%;
   }
   .project1 a,
   .project2 a {
@@ -755,28 +758,22 @@ h1 {
   }
   .projectimgbox {
     flex-wrap: wrap;
-    padding-left: 5vw;
+    padding-left: 2vw;
   }
-  .project1,
-  .project2 {
-    /* height: 45vw; */
-    width: 79vw;
-    padding-bottom: 4vw;
-  }
-  .project1 img,
-  .project2 img {
-    margin-left: 19vw;
-    height: 13vw;
-    width: 26.5vw;
-  }
+     .project1, .project2 {
+        padding-bottom: 2vw;
+        width: 96%;
+    }
+
   .projectimgbox p {
     font-size: 2.4vw;
     padding: 3vw;
   }
   .project1 a,
   .project2 a {
-    font-size: 2.5vw;
+    font-size: 3vw;
     margin-left: 3vw;
+    padding: 2vw 2vw;
   }
   #about {
     margin-top: 90vw;
@@ -869,22 +866,12 @@ h1 {
   #projects {
     margin-top: 115vw;
   }
-  .project1 img,
-  .project2 img {
-    margin-left: 16.5vw;
-    height: 16vw;
-    width: 29.5vw;
-  }
+
   .projectimgbox p {
     font-size: 3vw;
     padding: 3vw;
   }
-  .project1,
-  .project2 {
-    /* height: 59vw; */
-    padding-bottom: 4vw;
-    width: 80vw;
-  }
+  
   .project1 a,
   .project2 a {
     font-size: 3.5vw;
@@ -986,21 +973,9 @@ h1 {
     font-size: 9vw;
     padding-left: 28vw;
   }
-  .project1 img,
-  .project2 img {
-    margin-left: 14.5vw;
-    height: 20vw;
-    width: 33.5vw;
-  }
-  .projectimgbox p {
+    .projectimgbox p {
     font-size: 4vw;
     padding: 3vw;
-  }
-  .project1,
-  .project2 {
-    /* height: 85vw; */
-    padding-bottom: 4vw;
-    width: 80vw;
   }
   .project1 a,
   .project2 a {
