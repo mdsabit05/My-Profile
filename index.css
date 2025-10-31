@@ -236,8 +236,8 @@ h1 {
 /* ...skills section... */
 
 #skills {
-  margin-top: 13vw;
-  height: 50vh;
+  margin-top: 8vw;
+  height: auto;
   padding-top: 5vw;
 }
 #skills h2 {
@@ -313,9 +313,8 @@ h1 {
 /* ...project section... */
 
 #projects {
-  margin-top: 15vw;
-  height: 50vh;
-  margin-bottom: 25vw;
+  margin-top: 8vw;
+  height: auto;
   padding: 5vw;
 }
 #projects h2 {
@@ -326,11 +325,13 @@ h1 {
 .projectimgbox {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5vw;
   padding: 4vw;
 }
 .project1,
-.project2 , .project3 {
+.project2 , .project3 , .project4 , .project5 {
   padding-bottom: 2vw;
   width: 40%;
   background-color: rgb(240, 243, 245);
@@ -350,9 +351,17 @@ h1 {
   transform: scale(1.05);
   background-color: rgb(251, 167, 134);
 }
+.project5:hover {
+  transform: scale(1.05);
+  background-color:rgb(227, 218, 115) ;
+}
+.project4:hover {
+  transform: scale(1.05);
+  background-color:rgb(245, 160, 240) ;
+}
 
 
-.project1, .project2 , .project3 {
+.project1, .project2 , .project3 , .project4 , .project5 {
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -361,7 +370,7 @@ h1 {
   padding: 2vw;
 }
 
-.project1 img, .project2 img , .project3 img {
+.project1 img, .project2 img , .project3 img , .project4 img , .project5 img {
   height: 8vw;
   object-fit: cover;
   margin-bottom: 1.5vw;
@@ -408,12 +417,34 @@ h1 {
   background-color: rgb(246, 138, 96);
   color: rgb(0, 0, 0);
 }
+.project4 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+}
+.project5 a:hover {
+  background-color:  rgb(237, 224, 77) ;
+  color: rgb(0, 0, 0);
+}
+.project5 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+}
+.project4 a:hover {
+  background-color:  rgb(247, 113, 216) ;
+  color: rgb(0, 0, 0);
+}
 
 /* ...contact section... */
 
 #contact {
-  margin-top: 13vw;
-  height: 20vh;
+  margin-bottom: 3vw;
+  height: auto;
 }
 #contact h2 {
   padding-left: 8vw;
@@ -494,7 +525,6 @@ h1 {
   .skill2,
   .skill3,
   .skill4 {
-    /* height: 23vw; */
     padding-bottom: 2vw;
     width: 21.2vw;
   }
@@ -519,7 +549,6 @@ h1 {
     background-color: rgb(247, 178, 87);
   }
   #projects {
-    margin-top: 30vw;
     padding: 6vw;
   }
   #projects h2 {
@@ -538,10 +567,10 @@ h1 {
   .project1 a {
     margin-top: 1vw;
   }
-  .project1 img, .project2 img {
+  .project1 img, .project2 img , .project3 img , .project4 img , .project5 img {
     height: 9vw;
   }
-  .project1 a , .project2 a {
+  .project1 a , .project2 a , .project3 a , .project4 a , .project5 a {
     background-color: rgb(26, 25, 25);
     padding: 0.8vw 1.2vw;
     border-radius: 29px;
@@ -549,9 +578,6 @@ h1 {
     color: white;
     font-size: 2vw;
 }
-  #about {
-    margin-top: 34vw;
-  }
   .aboutimg img {
     height: 23vw;
     width: 13vw;
@@ -631,7 +657,6 @@ h1 {
   .skill2,
   .skill3,
   .skill4 {
-    /* height: 22vw; */
     padding-bottom: 2VW;
     width: 42.2vw;
   }
@@ -645,9 +670,6 @@ h1 {
   .skillimgbox p {
     font-size: 1.8vw;
   }
-  #projects {
-    margin-top: 46vw;
-  }
   #projects h2 {
     font-size: 6vw;
   }
@@ -656,24 +678,23 @@ h1 {
     font-size: 2vw;
     margin-bottom: 1vw;
   }
-  .project1 img, .project2 img {
+  .project1 img, .project2 img , .project3 img , .project4 img {
     height: 11vw;
   }
   .project2 img {
   height: 13vw;
 }
-  .project1, .project2 {
+  .project1, .project2, .project3, .project4 {
     padding-bottom: 2vw;
     width: 50%;
   }
   .project1 a,
-  .project2 a {
+  .project2 a,
+  .project3 a,
+  .project4 a, .project5 a {
     font-size: 2vw;
     padding: 1vw 1.5vw;
     border-radius: 37px;
-  }
-  #about {
-    margin-top: 49vw;
   }
   .aboutimg img {
     height: 28vw;
@@ -759,7 +780,6 @@ h1 {
   .skill2,
   .skill3,
   .skill4 {
-    /* height: 31vw; */
     padding-bottom: 3vw;
     width: 43.2vw;
   }
@@ -773,10 +793,7 @@ h1 {
   #projects h2 {
     font-size: 7vw;
   }
-  #projects {
-    margin-top: 57vw;
-  }
-   .project1 img, .project2 img {
+   .project1 img, .project2 img , .project3 img , .project4 img , .project5 img {
     height: 14vw;
   }
   .project2 img {
@@ -786,23 +803,20 @@ h1 {
     flex-wrap: wrap;
     padding-left: 2vw;
   }
-     .project1, .project2 {
-        padding-bottom: 2vw;
-        width: 96%;
-    }
+  .project1, .project2, .project3, .project4 , .project5 {
+    padding-bottom: 2vw;
+    width: 96%;
+  }
 
   .projectimgbox p {
     font-size: 2.4vw;
     padding: 3vw;
   }
   .project1 a,
-  .project2 a {
+  .project2 a , .project3 a , .project4 a , .project5 a {
     font-size: 3vw;
     margin-left: 3vw;
     padding: 2vw 2vw;
-  }
-  #about {
-    margin-top: 90vw;
   }
   .aboutimg img {
     height: 36vw;
@@ -858,7 +872,6 @@ h1 {
   }
   #skills {
     margin-top: 13vw;
-    height: 50vh;
     padding-top: 12vw;
   }
   #skills h2 {
@@ -869,7 +882,6 @@ h1 {
   .skill2,
   .skill3,
   .skill4 {
-    /* height: 31vw; */
     width: 85.2vw;
   }
   .skill1 img,
@@ -889,12 +901,9 @@ h1 {
     font-size: 3vw;
     padding: 0.8vw 1.5vw;
   }
-  #projects {
-    margin-top: 115vw;
+  .project1 img, .project2 img , .project3 img , .project4 img , .project5 img {
+    height: 17vw;
   }
-      .project1 img, .project2 img {
-        height: 17vw;
-    }
 .project2 img {
   height: 21vw;
 }
@@ -904,12 +913,9 @@ h1 {
   }
   
   .project1 a,
-  .project2 a {
+  .project2 a , .project3 a , .project4 a , .project5 a {
     font-size: 3.5vw;
     margin-left: 3vw;
-  }
-  #about {
-    margin-top: 110vw;
   }
   .aboutimg img {
     height: 42vw;
@@ -982,8 +988,7 @@ h1 {
   .skill2,
   .skill3,
   .skill4 {
-    /* height: 44vw; */
-    padding-bottom: 3VW;
+    padding-bottom: 3vw;
     width: 86.2vw;
   }
   .skillimgbox a {
@@ -997,26 +1002,23 @@ h1 {
     height: 15vw;
     width: 15vw;
   }
-  #projects {
-    margin-top: 130vw;
-  }
   #projects h2 {
     font-size: 9vw;
     padding-left: 28vw;
   }
-    .projectimgbox p {
-    font-size: 4vw;
-    padding: 3vw;
+  .projectimgbox p {
+  font-size: 4vw;
+  padding: 3vw;
   }
-      .project1 img{
-        height: 21vw;
-    }
-    .project2 img {
-        height: 25vw;
-    }
+  .project1 img{
+    height: 21vw;
+  }
+  .project2 img , .project3 img , .project4 img  , .project5 img {
+    height: 25vw;
+  }
 
   .project1 a,
-  .project2 a {
+  .project2 a,  .project3 a , .project4 a , .project5 a {
     font-size: 4vw;
     padding: 2vw 2.5vw;
     margin-left: 3vw;
@@ -1026,9 +1028,6 @@ h1 {
   }
   .projectimgbox {
     gap: 4vw;
-  }
-  #about {
-    margin-top: 140vw;
   }
   .aboutimg img {
     height: 59vw;
