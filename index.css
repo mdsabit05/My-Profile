@@ -331,7 +331,7 @@ h1 {
   padding: 4vw;
 }
 .project1,
-.project2 , .project3 , .project4 , .project5 {
+.project2 , .project3 , .project4 , .project5 , .project6 , .project7{
   padding-bottom: 2vw;
   width: 40%;
   background-color: rgb(240, 243, 245);
@@ -359,9 +359,17 @@ h1 {
   transform: scale(1.05);
   background-color:rgb(245, 160, 240) ;
 }
+.project6:hover {
+  transform: scale(1.05);
+  background-color:rgb(94, 173, 144) ;
+}
+.project7:hover {
+  transform: scale(1.05);
+  background-color:rgba(249, 209, 116, 0.853) ;
+}
 
 
-.project1, .project2 , .project3 , .project4 , .project5 {
+.project1, .project2 , .project3 , .project4 , .project5 , .project6 , .project7 {
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -370,10 +378,16 @@ h1 {
   padding: 2vw;
 }
 
-.project1 img, .project2 img , .project3 img , .project4 img , .project5 img {
+.project1 img, .project2 img , .project3 img , .project4 img , .project5 img , .project6 img , .project7 img {
   height: 8vw;
   object-fit: cover;
   margin-bottom: 1.5vw;
+  padding: 0;           
+}
+.project7 img {
+  height: 10vw;
+  object-fit: cover;
+  margin-bottom: 0vw;
   padding: 0;           
 }
 
@@ -435,8 +449,30 @@ h1 {
   margin-left: 1vw;
   color: white;
 }
+.project6 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+}
+.project7 a {
+  background-color: rgb(26, 25, 25);
+  padding: 0.4vw 1vw;
+  border-radius: 15px;
+  margin-left: 1vw;
+  color: white;
+}
 .project4 a:hover {
   background-color:  rgb(247, 113, 216) ;
+  color: rgb(0, 0, 0);
+}
+.project6 a:hover {
+  background-color:  rgb(101, 216, 174) ;
+  color: rgb(0, 0, 0);
+}
+.project7 a:hover {
+  background-color: rgba(246, 185, 43, 0.853) ;
   color: rgb(0, 0, 0);
 }
 
