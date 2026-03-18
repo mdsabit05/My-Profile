@@ -365,7 +365,7 @@ h1 {
 }
 .project7:hover {
   transform: scale(1.05);
-  background-color:rgba(249, 209, 116, 0.853) ;
+  background-color:rgba(35, 128, 235, 0.853) ;
 }
 
 
@@ -385,10 +385,11 @@ h1 {
   padding: 0;           
 }
 .project7 img {
-  height: 10vw;
+  height: 4vw;
   object-fit: cover;
-  margin-bottom: 0vw;
-  padding: 0;           
+  padding: 3px;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
 }
 
 .projectimgbox p {
@@ -472,7 +473,7 @@ h1 {
   color: rgb(0, 0, 0);
 }
 .project7 a:hover {
-  background-color: rgba(246, 185, 43, 0.853) ;
+  background-color: rgba(38, 173, 240, 0.853) ;
   color: rgb(0, 0, 0);
 }
 

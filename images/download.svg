@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="glintTitle">
+  <title id="glintTitle">Glint project icon</title>
+  <!-- accent circle -->
+  <circle cx="60" cy="60" r="54" fill="#008178"></circle>
+  <!-- subtle inner highlight -->
+  <ellipse cx="46" cy="44" rx="20" ry="10" fill="#ffffff" opacity="0.06"></ellipse>
+  <!-- sparkle / glint shape -->
+  <g transform="translate(60,60)">
+    <path d="M0-26 L6-8 L24-2 L6 4 L0 22 L-6 4 L-24-2 L-6-8 Z" fill="#ffffff"></path>
+    <!-- small spark dots -->
+    <circle cx="-34" cy="-18" r="3" fill="#ffffff" opacity="0.95"></circle>
+    <circle cx="36" cy="-10" r="2.2" fill="#ffffff" opacity="0.9"></circle>
+  </g>
+</svg>
