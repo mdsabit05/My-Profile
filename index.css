@@ -282,10 +282,10 @@ img {
 
 .about-image img {
     width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
+    height: auto;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
+    display: block;
 }
 
 .about-text {
