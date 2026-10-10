@@ -1,161 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Md Sabit Raza — Full-Stack Developer and AI Application Developer. BCA student seeking software development internships.">
+    <title>Md Sabit Raza — Full-Stack &amp; AI Developer</title>
     <link rel="icon" type="image/png" href="images/user_1385955.png">
-
-  <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header>
-    <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
 
-  <div class="sidebar" id="sidebar">
-    <div class="close-btn" onclick="toggleSidebar()">&times;</div>
-    <a href="#logo" class="active">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-  </div>
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="#hero" class="logo">
+                <span class="logo-accent">S</span>abit
+            </a>
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-    <nav class="logo" id="logo"> <h1>
-    <span class="first">Sa</span><span class="second">bit</span>
-  </h1></nav>
-    <nav id="navigation">
-      <a href="#navigation">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <!-- ===== MOBILE SIDEBAR ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <nav class="sidebar" id="sidebar" aria-label="Mobile navigation">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">&times;</button>
+        <a href="#hero" class="sidebar-link">Home</a>
+        <a href="#about" class="sidebar-link">About</a>
+        <a href="#skills" class="sidebar-link">Skills</a>
+        <a href="#projects" class="sidebar-link">Projects</a>
+        <a href="#contact" class="sidebar-link">Contact</a>
     </nav>
-  </header>
-  <main>
-    <!-- ...page1... -->
-    <section id="herosection">
-      <div class="herosection-content">
-        <h2>Hello! <br> This is Md <span>Sabit</span></h2>
-        <p>I'am a <span>web developer</span> with a passion for creating <span>impactful</span> projects.</p>
-        <a href="#projects">View my work</a>
-        <div class="logos">
-          <div class="logopng"><img src="images/facebook.png" alt="Facebook Logo"></div>
-          <div class="logopng"><img src="images/linkedin.png" alt="LinkedIn Logo"></div>
-          <div class="logopng"><img src="images/instagram.png" alt="Instagram Logo"></div>
-          <div class="logopng"><img src="images/whatsapp.png" alt="WhatsApp Logo"></div>
-        </div>
-      </div>
-      <div class="herosectionimg">    
-          <img src="images/WhatsApp Image 2025-08-31 at 21.29.18_8b1a14d9.jpg" alt="Hero Image">
-      </div>
-    </section>
-    <!-- ...page2... -->
-    <section id="about">
-        <div class="aboutimg">
-          <img src="images/aboutimg.jpg" alt="">
-        </div>
-        <div class="abouttext">
-          <h2>About <span>me</span></h2>
-          <p>Hi! I’m a <span>passionate</span>  web developer and tech enthusiast who loves building creative projects and learning new <span>skills</span> every day. I enjoy turning ideas into <span>interactive</span> websites while exploring the latest in tech. <br>Always <span>curious</span>, Always <span>coding!</span></p>
-        </div>
-    </section>
-    <!-- ...page3... -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skillimgbox">
-        <div class="skill1 skill1p">
-          <img src="images/files.png" alt="">
-          <p>I create clean and semantic HTML structures that form the backbone of every website I build</p>
-          <a href="https://www.w3schools.com/html/">learn more</a>
-        </div>
-        <div class="skill2 skill2p">
-          <img src="images/files (1).png" alt="">
-          <p>I design responsive and visually appealing websites with modern CSS techniques</p>
-          <a href="https://www.w3schools.com/css/">learn more</a>
-        </div>
-        <div class="skill3 skill3p">
-          <img src="images/js.png" alt="">
-          <p>I write dynamic and interactive scripts that bring websites to life and enhance user experience</p>
-          <a href="https://www.w3schools.com/js/">learn more</a>
-        </div>
-        <div class="skill4 skill4p">
-          <img src="images/paper.png" alt="">
-          <p>I design clean and modern UI/UX layouts, turning ideas into interactive prototypes</p>
-          <a href="https://help.figma.com/hc/en-us/categories/360002051613-Get-started">learn more</a>
-        </div>
-        <div class="skill4 skill4p">
-          <img src="images/reactownload.png" alt="">
-          <p>I Learn REACT in a simple a way by building topic wise projects and from this i became a frontend developer.</p>
-          <a href="https://react.dev/learn">learn more</a>
-        </div>
-        <div class="skill4 skill4p">
-          <img src="images/node js.jpg" alt="">
-          <p>I Learn NODE JS to start my backend learning to be a fullStack developer. </p>
-          <a href="https://nodejs.org/docs/latest/api/">learn more</a>
-        </div>
-        <div class="skill4 skill4p">
-          <img src="images/express.png" alt="">
-          <p>I Learn EXPRESS JS to develop backend skill and it is easy framwork for Nodejs.</p>
-          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction">learn more</a>
-        </div>
-      </div>
-      </div>
-    </section>
-    <!-- ...page4... -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projectimgbox">
-         <!-- <div class="project4">
-          <img src="images/Business20man20working-284998.png" alt="">
-          <p>My first step into web development — a fully hand-coded portfolio using only HTML and CSS to highlight my skills and growth as a developer.</p>
-          <a href="https://mdsabit05.github.io/My-protfolio-website/">View project</a>
-        </div> -->
-        <!-- <div class="project2">
-          <img src="images/[CITYPNG.COM]Brown Coffee Cup Logo Design HD PNG - 4000x4000.png" alt="">
-          <p>A modern café website designed to showcase menu items, reservations, and customer experience. Built with responsive layouts and using  HTML and CSS, it highlights my ability to create visually appealing and user-friendly web pages.</p>
-          <a href="https://mdsabit05.github.io/Brew-Bite-cafe/">View project</a>
-        </div> -->
-        <div class="project3">
-          <img src="images/Screenshot 2025-10-13 183512.png" alt="">
-          <p>A beautifully designed online flower shop that built with a focus on visual appeal and smooth user experience, it makes online flower shopping fresh, simple, and delightful.</p>
-          <a href="https://mdsabit05.github.io/Flower-shop-laptop-only-website-/">View project</a>
-        </div>
-        <div class="project5">
-          <img src="images/75eaea_75102bdd0efc4755b327bd735aaa6444~mv2.avif" alt="">
-          <p>A modern and impactful NGO website built to raise awareness and support for social causes. It features a clean design and intuitive navigation.</p>
-          <a href="https://mdsabit05.github.io/Largerthan-an-NGO-website-/">View project</a>
-        </div>
-        <div class="project1">
-          <img src="images/piano.png" alt="">
-          <p>A simple yet interactive piano built using HTML, CSS, and JavaScript. It allows users to play different notes  with smooth sound effects and a clean UI. This project helped me practice event handling and DOM manipulation.</p>
-          <a href="https://mdsabit05.github.io/Piano-melody/">View project</a>
-        </div>
-        <div class="project6">
-          <img src="images/download.svg" alt="">
-          <p>A modern and minimal Glint-style website built using HTML and CSS.
-          It features a responsive layout, smooth animations, and a clean UI inspired by premium portfolio templates. This project helped me improve my front-end skills, including layout structuring and responsive design..</p>
-          <a href="https://mdsabit05.github.io/Glint-website/">View project</a>
-        </div>
-        <div class="project7">
-          <img src="images/logo.webp" alt="">
-          <p>Cara is a modern and responsive eCommerce website designed to deliver a smooth and engaging online shopping experience. Built using HTML and CSS. The project focuses on clean UI design, product showcasing, and user-friendly navigation. This project helped me strengthen my skills in frontend development, UI/UX design, and building real-world web applications.</p>
-          <a href="https://mdsabit05.github.io/cara-website/">View project</a>
-      </div>
-    </section>
-    <!-- ...page5... -->
-    <section id="contact">
-     <h2>Get in <span>touch</span></h2>
-     <div class="contactbox">
-      <div class="mail">Email : mdsabitrazabarkati@gmail.com</div>
-      <div class="phonenum">Phone : +91 7978152181</div>
-     </div>
-    </section>
-  </main>
 
+    <main>
 
-  <script src="index.js"></script>
+        <!-- ===== HERO ===== -->
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-eyebrow">
+                        <span class="eyebrow-dot" aria-hidden="true"></span>
+                        Open to internship opportunities
+                    </p>
+                    <h1>Md Sabit Raza</h1>
+                    <p class="hero-role">
+                        Full-Stack Developer
+                        <span class="role-sep" aria-hidden="true">/</span>
+                        AI Application Developer
+                    </p>
+                    <p class="hero-degree">BCA (Hons.) Student</p>
+                    <p class="hero-description">
+                        I build full-stack web applications and AI-powered tools that solve practical problems.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/mdsabit05" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            github.com/mdsabit05
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/WhatsApp Image 2025-08-31 at 21.29.18_8b1a14d9.jpg" alt="Photo of Md Sabit Raza" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <p class="section-subtitle">A bit about who I am and what drives me.</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/aboutimg.jpg" alt="Md Sabit Raza" />
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm <strong>Md Sabit Raza</strong>, a BCA (Hons.) student at
+                            <strong>Rajkumar College of IT and Management</strong>, focused on
+                            full-stack web development and AI-powered applications.
+                        </p>
+                        <p>
+                            I enjoy building projects that combine modern backend systems, database
+                            design, and AI integration. My work spans RESTful API development,
+                            relational and vector databases, and LLM-powered tools using techniques
+                            like RAG, embeddings, and semantic search.
+                        </p>
+                        <p>
+                            I'm particularly interested in the intersection of practical software
+                            engineering and intelligent systems — building tools that are both
+                            technically sound and genuinely useful.
+                        </p>
+                        <p>
+                            Currently seeking a <strong>software development internship</strong>
+                            where I can contribute to real products, learn from experienced engineers,
+                            and continue growing as a developer.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-value">BCA (Hons.)</span>
+                                <span class="highlight-label">Degree</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">Full-Stack</span>
+                                <span class="highlight-label">Focus</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-value">AI Apps</span>
+                                <span class="highlight-label">Specialization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Skills</h2>
+                    <p class="section-subtitle">Technologies and tools I work with.</p>
+                </div>
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-badges">
+                            <span class="badge">HTML5</span>
+                            <span class="badge">CSS3</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">TypeScript</span>
+                            <span class="badge">React.js</span>
+                            <span class="badge">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Express.js</span>
+                            <span class="badge">Hono</span>
+                            <span class="badge">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skill-badges">
+                            <span class="badge">PostgreSQL</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Drizzle ORM</span>
+                            <span class="badge">pgvector</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>AI Development</h3>
+                        <div class="skill-badges">
+                            <span class="badge">AI API Integration</span>
+                            <span class="badge">LLM Applications</span>
+                            <span class="badge">RAG</span>
+                            <span class="badge">Embeddings</span>
+                            <span class="badge">Vector Search</span>
+                            <span class="badge">AI Agents</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools &amp; Workflow</h3>
+                        <div class="skill-badges">
+                            <span class="badge">Git</span>
+                            <span class="badge">GitHub</span>
+                            <span class="badge">Docker</span>
+                            <span class="badge">Postman</span>
+                            <span class="badge">Cloudflare Pages</span>
+                            <span class="badge">Render</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <p class="section-subtitle">Things I've built — personal and academic projects.</p>
+                </div>
+                <div class="projects-grid">
+
+                    <!-- AcademIQ -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon" aria-hidden="true">&#127891;</div>
+                            <div class="project-links">
+                                <a href="https://github.com/mdsabit05/AcademIQ" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="AcademIQ on GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <a href="https://academiq-6ch.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="AcademIQ live demo">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3>AcademIQ</h3>
+                        <p class="project-subtitle">AI-Powered Learning Platform</p>
+                        <p class="project-description">
+                            An AI-powered learning platform designed to help students learn from
+                            study materials, practice questions, prepare for exams, and track
+                            their learning progress.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AI Learning</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">pgvector</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </article>
+
+                    <!-- RKhub -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon" aria-hidden="true">&#128218;</div>
+                            <div class="project-links">
+                                <a href="https://github.com/mdsabit05/RKhub" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="RKhub on GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3>RKhub</h3>
+                        <p class="project-subtitle">College Learning Resource Platform</p>
+                        <p class="project-description">
+                            A college learning resource platform that organizes notes, previous-year
+                            question papers, syllabi, and reference materials, with AI-assisted
+                            academic search and exam preparation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Hono</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">AI Integration</span>
+                        </div>
+                    </article>
+
+                    <!-- CodeQuiz -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon" aria-hidden="true">&#128187;</div>
+                            <div class="project-links">
+                                <a href="https://github.com/mdsabit05/CodeQuiz" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="CodeQuiz on GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3>CodeQuiz</h3>
+                        <p class="project-subtitle">Coding Quiz Application</p>
+                        <p class="project-description">
+                            A coding quiz application designed to provide an interactive way to
+                            practice programming concepts and test technical knowledge with
+                            multiple-choice questions and instant feedback.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Interactive</span>
+                            <span class="tag">Quiz</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="projects-footer">
+                    <a href="https://github.com/mdsabit05" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        View All Projects on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <p class="section-subtitle">Open to internship opportunities and interesting conversations.</p>
+                </div>
+                <div class="contact-content">
+                    <p class="contact-intro">
+                        I'm currently looking for software development internship opportunities.
+                        If you have a position that might be a good fit, or just want to chat
+                        about development and AI, feel free to reach out.
+                    </p>
+                    <div class="contact-items">
+
+                        <a href="mailto:mdsabitrazabarkati@gmail.com" class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">mdsabitrazabarkati@gmail.com</span>
+                            </div>
+                            <div class="contact-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/mdsabit05" target="_blank" rel="noopener noreferrer" class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/mdsabit05</span>
+                            </div>
+                            <div class="contact-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                        </a>
+
+                        <a href="tel:+917978152181" class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.72 3.43 2 2 0 0 1 3.69 1.28h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 7978152181</span>
+                            </div>
+                            <div class="contact-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>
+                Built by Md Sabit Raza &nbsp;&middot;&nbsp;
+                <a href="https://github.com/mdsabit05" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

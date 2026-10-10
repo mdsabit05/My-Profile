@@ -1,34 +1,81 @@
-const overlay = document.getElementById("overlay");
-const menuBtn = document.querySelector(".toggle-btn");
+/* ===================================================
+   PORTFOLIO — Md Sabit Raza
+   index.js — Navigation & interactivity
+   =================================================== */
 
+(function () {
+    'use strict';
 
-    function toggleSidebar() {
-      sidebar.classList.toggle("active");
-      overlay.classList.toggle("active");
+    const menuToggle    = document.getElementById('menuToggle');
+    const sidebar       = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose  = document.getElementById('sidebarClose');
+    const sidebarLinks  = document.querySelectorAll('.sidebar-link');
+    const header        = document.getElementById('site-header');
+
+    // ── Sidebar open / close ──────────────────────────
+    function openSidebar() {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        menuToggle.setAttribute('aria-expanded', 'true');
     }
 
-    // Close sidebar if clicked outside
-    document.addEventListener("click", function(event) {
-      if (
-        sidebar.classList.contains("active") &&
-        !sidebar.contains(event.target) &&
-        !event.target.classList.contains("toggle-btn")
-      ) {
-        toggleSidebar();
-      }
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    menuToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    sidebarLinks.forEach(function (link) {
+        link.addEventListener('click', closeSidebar);
     });
 
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+            closeSidebar();
+        }
+    });
 
-    // IntersectionObserver → Show button only after hero is gone
-  const observer = new IntersectionObserver(entries => {
-    const entry = entries[0];
-    if (entry.isIntersecting) {
-      // Hero visible → hide button
-      menuBtn.classList.remove("visible");
-    } else {
-      // Hero not visible → show button
-      menuBtn.classList.add("visible");
+    // ── Header border on scroll ───────────────────────
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 8) {
+            header.style.borderBottomColor = 'var(--border)';
+        } else {
+            header.style.borderBottomColor = 'transparent';
+        }
+    }, { passive: true });
+
+    // ── Highlight active nav link on scroll ──────────
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.desktop-nav a');
+
+    function updateActiveLink() {
+        var scrollPos = window.scrollY + 80;
+        var current = '';
+
+        sections.forEach(function (section) {
+            if (section.offsetTop <= scrollPos) {
+                current = section.id;
+            }
+        });
+
+        navLinks.forEach(function (link) {
+            link.style.color = '';
+            var href = link.getAttribute('href');
+            if (href === '#' + current) {
+                link.style.color = 'var(--accent)';
+            }
+        });
     }
-  }, { threshold: 0.1 });
 
-  observer.observe(hero);
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
+
+}());
