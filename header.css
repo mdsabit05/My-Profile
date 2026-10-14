@@ -191,3 +191,18 @@
         padding: 0 16px;
     }
 }
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .sidebar {
+        width: 240px;
+    }
+
+    .sidebar-link {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
